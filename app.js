@@ -1,3 +1,5 @@
+// Navigation Bar Scrolling Effect
+
 const NAVBAR = document.querySelector('nav');
 
 window.addEventListener('scroll', ()=> {

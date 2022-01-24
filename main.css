@@ -5,6 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat';
+  transition: 0.5s ease;
+  scroll-behavior: smooth;
 
   /* border: 1px solid red; */
 }
