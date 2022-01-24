@@ -4,6 +4,7 @@ nav {
   width: 100%;
   height: 10vh;
   position: fixed;
+  z-index: 100;
   padding: 0 9rem;
   transition: 0.5s ease;
 
@@ -283,6 +284,137 @@ nav.scrolled ul li a {
   border: 0.25rem solid var(--main-color);
 }
 
-svg {
+#services svg {
   width: 60%;
+}
+
+/* Contact Us */
+#contacts {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+.upper {
+  height: 25vh;
+  width: 100%;
+  background-image: url('town.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  position: relative;
+  z-index: 1;
+}
+
+.upper-overlay {
+  content: "";
+  height: 25vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.upper-overlay-text {
+  font-size: 3rem;
+  color: var(--tertiary-color);
+  font-weight: 900;
+  text-align: center;
+}
+
+.lower {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.lower > * {
+  margin: 0 1.5rem;
+}
+
+.lower-left {
+  width: 30%;
+}
+
+.lower-card {
+  height: 20vh;
+  width: 100%;
+  background-color: var(--main-color);
+  box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+  margin: 1rem 0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.lower-card svg {
+  width: 15%;
+  margin: 0 3rem;
+}
+
+.lower-card svg path {
+  fill: var(--tertiary-color);
+}
+
+.contact-info > * {
+  margin: 0.5rem 0;
+}
+
+.contact-info > p {
+  color: var(--secondary-color);
+  font-size: 1.25rem;
+}
+
+.contact-info > p:nth-child(2) {
+  font-weight: 900;
+}
+
+.lower-right {
+  width: 30%;
+}
+
+.lower-right > form{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+form > * {
+  margin: 0.25rem 0;
+}
+
+label {
+  color: var(--main-color);
+}
+
+.name {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.submit {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--main-color);
+  border-radius: 5px;
+  background-color: var(--tertiary-color);
+  width: 25%;
+  padding: 0.5rem 0;
+  border: none;
+  cursor: pointer;
 }
