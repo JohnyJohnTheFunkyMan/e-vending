@@ -15,6 +15,10 @@ nav {
   /* border: 1px solid black; */
 }
 
+.github {
+  display: none;
+}
+
 .logo {
   font-weight: 900;
   font-size: 2rem;
@@ -42,14 +46,18 @@ nav {
   font-size: 1.5rem;
 }
 
-.secnav > li > a {
+.secnav > li > .nav-card-cont > svg {
+  display: none;
+}
+
+.secnav > li > .nav-card-cont a {
   text-decoration: none;
   color: var(--secondary-color);
   font-weight: 900;
   transition: 0.5s ease;
 }
 
-.secnav > li > a:hover {
+.secnav > li > .nav-card-cont > a:hover {
   color: var(--primary-color);
 }
 
@@ -63,8 +71,12 @@ nav.scrolled .logo a {
   color: var(--main-color);
 }
 
-nav.scrolled ul li a {
+nav.scrolled ul li .nav-card-cont a {
   color: var(--main-color);
+}
+
+.side-menu {
+  display: none;
 }
 
 /* Hero Section */
@@ -515,7 +527,78 @@ label {
 }
 
 @media screen and (max-width: 850px) {
-  nav {
-    padding: 0 6rem;
+  .github {
+    display: block;
+    width: 2.5rem;
   }
+  .github svg path{
+    fill: var(--main-color);
+  }
+  nav {
+    padding: 0;
+    bottom: 0;
+    justify-content: space-between;
+    padding: 0 4rem;
+  }
+  nav.scrolled {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+  .side-menu {
+    display: block;
+    width: 2.5rem;
+  }
+  .side-menu svg path {
+    fill: var(--main-color);
+  }
+  .secnav {
+    height: 400px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: -100%;
+    z-index: 0;
+    padding: 5%;
+    background-color: var(--secondary-color);
+    border-radius: 25px 25px 0px 0px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.37);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "About Services Contacts"
+  }
+
+  #about {
+    grid-area: About;
+  }
+  #services {
+    grid-area: Services;
+  }
+  #contacts {
+    grid-area: Contacts;
+  }
+
+  .nav-card-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .nav-card-cont > * {
+    margin: 1rem 0;
+  }
+
+  .secnav > li > .nav-card-cont > svg {
+    width: 50%;
+    display: block;
+  }
+
+  .secnav > li > .nav-card-cont > svg > path {
+    fill: var(--main-color);
+  }
+
+  .secnav > li > .nav-card-cont > a {
+    color: var(--main-color);
+  }
+
 }
