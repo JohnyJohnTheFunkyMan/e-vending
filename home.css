@@ -418,3 +418,104 @@ label {
   border: none;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1629px) {
+  .about-desc {
+    font-size: 0.9rem;
+  }
+
+  #services svg {
+    width: 40%;
+  }
+
+  .card-logo {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .lower-right {
+    height: 50%;
+  }
+
+  #contacts {
+    height: 110vh;
+  }
+}
+
+@media screen and (max-width: 1545px) {
+  .button {
+    width: 40%;
+  }
+  .contact-info > p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1504px) {
+  .card-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1369px) {
+  .about-left {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1328px) {
+  p.title {
+    font-size: 5rem;
+  }
+
+  .card {
+    width: 25%;
+  }
+
+  .lower-left {
+    width: 35%;
+  }
+  .submit {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1174px) {
+  .button {
+    width: 50%;
+  }
+
+  .upper-overlay-text {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1142px) {
+  .lower-left {
+    width: 45%;
+  }
+  .submit {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .about-desc {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .button {
+    width: 60%;
+  }
+  .about-right img {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  nav {
+    padding: 0 6rem;
+  }
+}
