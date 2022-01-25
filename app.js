@@ -11,3 +11,25 @@ window.addEventListener('scroll', ()=> {
     NAVBAR.classList.remove('scrolled');
   }
 })
+
+// 950px Navigation Bar Drop Down
+const menu = document.querySelector('.secnav-cont');
+const menu_open = document.querySelector('.side-menu');
+const menu_close = document.querySelector('.close');
+
+if(menu_open) {
+  menu_open.addEventListener('click', ()=> {
+    console.log('clicked');
+    menu.classList.toggle('dropped');
+  })
+};
+if (menu_close) {
+  menu_close.addEventListener('click', ()=> {
+    menu.classList.remove('dropped');
+  })
+}
+if(menu) {
+  menu.addEventListener('click', ()=> {
+    menu.classList.remove('dropped');
+  })
+}
