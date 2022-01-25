@@ -19,7 +19,6 @@ const menu_close = document.querySelector('.close');
 
 if(menu_open) {
   menu_open.addEventListener('click', ()=> {
-    console.log('clicked');
     menu.classList.toggle('dropped');
   })
 };
