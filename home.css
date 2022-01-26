@@ -254,7 +254,18 @@ nav.scrolled ul li .nav-card-cont a > p {
   align-items: center;
 }
 
-.card > * {
+.title-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card > .title-logo > * {
+  margin: 1rem 0;
+}
+
+.card > .card-inf > * {
   margin: 1rem 0;
 }
 
@@ -303,7 +314,7 @@ nav.scrolled ul li .nav-card-cont a > p {
   color: var(--main-color);
 }
 
-#card2 > .card-logo {
+#card2 > .title-logo >.card-logo {
   border: 0.25rem solid var(--main-color);
 }
 
@@ -528,6 +539,16 @@ label {
   }
 }
 
+@media screen and (max-width: 990px) {
+  .card > .title-logo > * {
+    margin: 0.5rem 0;
+  }
+
+  .card > .card-inf > * {
+    margin: 0.5rem 0;
+  }
+}
+
 @media screen and (max-width: 959px) {
   .button {
     width: 60%;
@@ -577,7 +598,7 @@ label {
     bottom: 0;
   }
   .secnav {
-    height: 400px;
+    height: 250px;
     width: 100%;
     position: absolute;
     left: 0;
@@ -620,8 +641,12 @@ label {
     height: 80%;
   }
 
+  .nav-card-cont > a > * {
+    margin: 0.5rem 0;
+  }
+
   .secnav > li > .nav-card-cont > a > svg {
-    width: 50%;
+    width: 60%;
     display: block;
   }
 
@@ -706,5 +731,50 @@ label {
   }
   .about-right > img {
     width: 80%;
+  }
+
+  /* Services */
+  #services {
+  height: 135vh;
+  }
+
+  .card-cont {
+    flex-direction: column;
+  }
+  .card-cont > * {
+    margin: 1rem 0;
+  }
+  .card {
+    width: 85%;
+    height: 30vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+  }
+  .card > * {
+  }
+  .title-logo {
+    width: 30%;
+  }
+  .card-inf {
+    width: 70%;
+  }
+  .card-desc {
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Contacts */
+  .lower-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-info > * {
+    text-align: center;
+  }
+  .submit {
+    width: 50%;
   }
 }
