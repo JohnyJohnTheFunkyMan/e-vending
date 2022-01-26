@@ -144,7 +144,6 @@ nav.scrolled ul li .nav-card-cont a > p {
 }
 
 .button {
-  color: var(--main-color);
   background-color: var(--tertiary-color);
   width: 32.5%;
   text-align: center;
@@ -154,6 +153,11 @@ nav.scrolled ul li .nav-card-cont a > p {
   border-radius: 100px;
   cursor: pointer;
   transition: 0.5s ease;
+}
+
+.button > a{
+  text-decoration: none;
+  color: var(--main-color);
 }
 
 .button:hover {
