@@ -454,6 +454,10 @@ label {
 }
 
 @media screen and (max-width: 1629px) {
+  .serv-desc {
+    width: 70%;
+  }
+
   .about-desc {
     font-size: 0.9rem;
   }
@@ -611,7 +615,7 @@ label {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "About Services Contacts"
+    "About Services Contacts";
   }
 
   #about {
@@ -776,5 +780,177 @@ label {
   }
   .submit {
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .herosec {
+    height: 120vh;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .submit {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  /* Hero Section */
+  .herosec {
+    height: 115vh;
+  }
+
+  /* Services */
+  .card-inf {
+    width: 60%;
+  }
+  .card-desc {
+    font-size: 0.9rem;
+  }
+
+  /* Contacts */
+  .lower {
+    flex-direction: column;
+  }
+  .lower > * {
+    width: 80%;
+  }
+  .lower-right > form {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .lower-card {
+    width: 100%;
+  }
+  #contacts {
+    height: 150vh;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  /* Navigation Bar */
+  nav {
+    padding: 0 1rem;
+  }
+  /* Hero Section */
+  .herosec {
+    height: 100vh;
+  }
+  p.title {
+    font-size: 4rem;
+  }
+  /* About */
+  #about {
+    height: 145vh;
+  }
+  /* Services */
+  .card-desc {
+    font-size: 0.75rem;
+  }
+  /* Contacts */
+  .upper-overlay-text {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  /* Navigation */
+  .nav-card-cont > a > p {
+    font-size: 1rem;
+  }
+  /* About */
+  #about {
+    height: 160vh;
+  }
+  /* Services */
+  #services {
+    height: 190vh;
+  }
+  .card {
+    flex-direction: column;
+    height: 50vh;
+  }
+  .card > * {
+    width: 100%;
+  }
+  .card-desc {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* Samsung Galaxy S20 Ultra */
+@media screen and (max-height: 915px) {
+  /* Services */
+  #services {
+    height: 130vh;
+  }
+  #contacts {
+    height: 145vh;
+  }
+}
+
+/* Samsung Galaxy S8+ */
+@media screen and (max-height: 740px) {
+  /* Hero Section */
+  .herosec {
+    height: 120vh;
+  }
+  /* About Section */
+  #about {
+    height: 190vh;
+  }
+  /* Services */
+  #services {
+    height: 230vh;
+  }
+  .card {
+    height: 60vh;
+  }
+  /* Contacts */
+  #contacts {
+    height: 160vh;
+  }
+}
+
+/* iPhone SE */
+@media screen and (max-height: 667px) {
+  .github > svg {
+    width: 80%;
+  }
+  .side-menu > svg{
+    width: 80%;
+  }
+  /* Hero Section */
+  .herosec {
+    height: 140vh;
+  }
+  /* About */
+  #about {
+    height: 200vh;
+  }
+  #contacts {
+    height: 170vh;
+  }
+}
+
+/* Nest Hub */
+@media screen and (max-height: 600px) {
+  /* About */
+  #about {
+    height: 145vh;
+  }
+  /* Services */
+  #services {
+    height: 140vh;
+  }
+  .card {
+    height: 90vh;
+  }
+  /* Contacts */
+  #contacts {
+    height: 135vh;
   }
 }
