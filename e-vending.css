@@ -49,14 +49,71 @@ p.title-card {
 }
 
 .card {
+  cursor: pointer;
   background-color: #c2c2c2;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.item-photo {
+  background-position: center;
+  background-size: cover;
+  height: 70%;
+  width: 100%;
+}
+
+.card:nth-child(1) > .item-photo {
+  background-image: url('water.jpg');
+}
+.card:nth-child(2) > .item-photo {
+  background-image: url('energy.jpg');
+}
+.card:nth-child(3) > .item-photo {
+  background-image: url('coffee.jpg');
+}
+.card:nth-child(4) > .item-photo {
+  background-image: url('vitamin.jpg');
+}
+.card:nth-child(5) > .item-photo {
+  background-image: url('soda.jpg');
+}
+.card:nth-child(6) > .item-photo {
+  background-image: url('lemonade.jpg');
+}
+.card:nth-child(7) > .item-photo {
+  background-image: url('gatorade.png');
+}
+.card:nth-child(8) > .item-photo {
+  background-image: url('iced-tea.jpg');
+}
+
+.item-info {
+  background-color: var(--secondary-color);
+  height: 30%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-info > p {
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 1.5rem;
 }
 
 .card:first-child {
   border-radius: 17.5px 0 0 0;
 }
 
-.card:nth-child(8) {
+.card:last-child {
+  border-radius: 0 0 17.5px 0;
+}
+
+.card:last-child > .item-info {
   border-radius: 0 0 17.5px 0;
 }
 
