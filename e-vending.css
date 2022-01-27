@@ -106,6 +106,7 @@ p.title-card {
   color: var(--main-color);
   font-weight: 900;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .card:first-child {
@@ -212,6 +213,23 @@ p.title-card {
   display: block;
   animation: fadein 0.5s;
 }
+
+.transaction-menu.showmenu > .transaction-input {
+  animation: scalein 0.5s;
+}
+
+@keyframes scalein {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -223,8 +241,160 @@ p.title-card {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 200;
 
   height: 20%;
   width: 30%;
   background-color: var(--main-color);
+}
+
+.buyinfo {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+  font-weight: 900;
+  font-size: 1rem;
+}
+.buybuttons {
+  display: grid;
+  height: 40%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.5%;
+}
+.buybuttons > * {
+  background-color: var(--secondary-color);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.yes {
+  border-radius: 0 0 0 20px;
+}
+.yes > p {
+  color: var(--main-color);
+  font-weight: 900;
+}
+.yes:hover {
+  background-color: var(--primary-color);
+}
+.cancel {
+  border-radius: 0 0 20px 0;
+}
+.cancel > p {
+  color: var(--main-color);
+  font-weight: 900;
+}
+.cancel:hover {
+  background-color: var(--primary-color);
+}
+.depos-cancel {
+  border-radius: 0 0 20px 0;
+}
+.depos-cancel > p {
+  color: var(--main-color);
+  font-weight: 900;
+}
+.depos-cancel:hover {
+  background-color: var(--primary-color);
+}
+.depos-deposit {
+  border-radius: 0 0 0 20px;
+}
+.depos-deposit > p {
+  color: var(--main-color);
+  font-weight: 900;
+}
+.depos-deposit:hover {
+  background-color: var(--primary-color);
+}
+
+.depos-title {
+  background-color: var(--secondary-color);
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+}
+.depos-title > p {
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+.depos-input {
+  height: 40%;
+  width: 100%;
+}
+.depos-buttons {
+  border: 0 0 20px 20px;
+  display: grid;
+  height: 30%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.5%;
+}
+.depos-buttons > * {
+  background-color: var(--secondary-color);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+input {
+  text-align: center;
+  border: none;
+  height: 100%;
+  width: 100%;
+  color: #2c2c2c;
+  font-weight: 900;
+  font-size: 2rem;
+}
+input:focus {
+  outline: none;
+}
+
+.nminfo {
+  border-radius: 20px 20px 0 0;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nminfo > p {
+  text-align: center;
+  color: #2c2c2c;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.nmbuttons {
+  border-radius: 0 0 20px 20px;
+  background-color: var(--secondary-color);
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nmbuttons:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+.nmbuttons > p {
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: var(--main-color);
+  text-align: center;
 }
