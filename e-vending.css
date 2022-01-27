@@ -1,4 +1,5 @@
 section {
+  position: relative;
   height: 100vh;
   width: 100%;
   background-color: var(--secondary-color);
@@ -6,8 +7,9 @@ section {
   padding: 2.5%;
   display: grid;
   grid-gap: 2.5%;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
-  "items items items menu"
+  "items items items menu";
 }
 
 .items {
@@ -16,7 +18,6 @@ section {
   grid-area: items;
   border-radius: 25px;
   position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +25,7 @@ section {
 }
 
 p.title-card {
+  grid-area: menu;
   position: absolute;
   top: -4%;
   transform: translateX(-50%);
@@ -49,14 +51,73 @@ p.title-card {
 }
 
 .card {
+  cursor: pointer;
   background-color: #c2c2c2;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.item-photo {
+  background-position: center;
+  background-size: cover;
+  height: 70%;
+  width: 100%;
+}
+
+.card:nth-child(1) > .item-photo {
+  background-image: url('water.jpg');
+  border-radius: 17.5px 0 0 0;
+}
+.card:nth-child(2) > .item-photo {
+  background-image: url('energy.jpg');
+}
+.card:nth-child(3) > .item-photo {
+  background-image: url('coffee.jpg');
+}
+.card:nth-child(4) > .item-photo {
+  background-image: url('vitamin.jpg');
+}
+.card:nth-child(5) > .item-photo {
+  background-image: url('soda.jpg');
+}
+.card:nth-child(6) > .item-photo {
+  background-image: url('lemonade.jpg');
+}
+.card:nth-child(7) > .item-photo {
+  background-image: url('gatorade.png');
+}
+.card:nth-child(8) > .item-photo {
+  background-image: url('iced-tea.jpg');
+}
+
+.item-info {
+  background-color: var(--secondary-color);
+  height: 30%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-info > p {
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .card:first-child {
   border-radius: 17.5px 0 0 0;
 }
 
-.card:nth-child(8) {
+.card:last-child {
+  border-radius: 0 0 17.5px 0;
+}
+
+.card:last-child > .item-info {
   border-radius: 0 0 17.5px 0;
 }
 
@@ -65,4 +126,275 @@ p.title-card {
   height: 100%;
   grid-area: menu;
   border-radius: 25px 0 25px 0;
+  padding: 12.5% 10%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dep:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.menu > .info {
+  width: 100%;
+}
+
+.menu > .info > * {
+  margin: 5% 0;
+}
+
+.info-title {
+  text-align: center;
+  font-weight: 900;
+  color: var(--tertiary-color);
+  font-size: 1.75rem;
+}
+.info-info {
+  color: var(--main-color);
+}
+.menu > .bar {
+  background-color: var(--tertiary-color);
+  height: 0.75%;
+  width: 100%;
+}
+.menu > .dep {
+  height: 20%;
+  width: 100%;
+  background-color: var(--tertiary-color);
+  border-radius: 20px;
+}
+
+.dep > * {
+  text-align: center;
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dep-title {
+  height: 30%;
+  width: 100%;
+}
+
+.dep-balance {
+  height: 40%;
+  width: 100%;
+  font-size: 2rem;
+  color: #2c2c2c;;
+  background-color: var(--main-color);
+  flex-wrap: wrap;
+}
+
+.dep-button {
+  height: 30%;
+  width: 100%;
+}
+
+.transaction-menu {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 100;
+  transition: 0.5s ease;
+}
+
+.transaction-menu.showmenu {
+  display: block;
+  animation: fadein 0.5s;
+}
+
+.transaction-menu.showmenu > .transaction-input {
+  animation: scalein 0.5s;
+}
+
+@keyframes scalein {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.transaction-input {
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+
+  height: 20%;
+  width: 30%;
+  background-color: var(--main-color);
+}
+
+.buyinfo {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+  font-weight: 900;
+  font-size: 1rem;
+}
+.buybuttons {
+  display: grid;
+  height: 40%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.5%;
+}
+.buybuttons > * {
+  background-color: var(--secondary-color);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.yes {
+  border-radius: 0 0 0 20px;
+}
+.yes > p {
+  color: var(--main-color);
+  font-weight: 900;
+}
+.yes:hover {
+  background-color: var(--primary-color);
+}
+.cancel {
+  border-radius: 0 0 20px 0;
+}
+.cancel > p {
+  color: var(--main-color);
+  font-weight: 900;
+}
+.cancel:hover {
+  background-color: var(--primary-color);
+}
+.depos-cancel {
+  border-radius: 0 0 20px 0;
+}
+.depos-cancel > p {
+  color: var(--main-color);
+  font-weight: 900;
+}
+.depos-cancel:hover {
+  background-color: var(--primary-color);
+}
+.depos-deposit {
+  border-radius: 0 0 0 20px;
+}
+.depos-deposit > p {
+  color: var(--main-color);
+  font-weight: 900;
+}
+.depos-deposit:hover {
+  background-color: var(--primary-color);
+}
+
+.depos-title {
+  background-color: var(--secondary-color);
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+}
+.depos-title > p {
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+.depos-input {
+  height: 40%;
+  width: 100%;
+}
+.depos-buttons {
+  border: 0 0 20px 20px;
+  display: grid;
+  height: 30%;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.5%;
+}
+.depos-buttons > * {
+  background-color: var(--secondary-color);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+input {
+  text-align: center;
+  border: none;
+  height: 100%;
+  width: 100%;
+  color: #2c2c2c;
+  font-weight: 900;
+  font-size: 2rem;
+}
+input:focus {
+  outline: none;
+}
+
+.nminfo {
+  border-radius: 20px 20px 0 0;
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nminfo > p {
+  text-align: center;
+  color: #2c2c2c;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.nmbuttons {
+  border-radius: 0 0 20px 20px;
+  background-color: var(--secondary-color);
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nmbuttons:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+.nmbuttons > p {
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: var(--main-color);
+  text-align: center;
 }

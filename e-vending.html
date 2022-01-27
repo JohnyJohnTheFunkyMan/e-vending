@@ -10,20 +10,125 @@
 </head>
 <body>
   <section>
+    <!-- <div class="buy"></div> -->
+    <div class="transaction-menu" id="nomoney">
+      <div class="transaction-input">
+        <div class="nminfo">
+          <p>You don't have enough money</p>
+        </div>
+        <div class="nmbuttons">
+          <p>Okay</p>
+        </div>
+      </div>
+    </div>
+    <div class="transaction-menu" id="buy-menu">
+      <div class="transaction-input">
+        <div class="buyinfo">
+          <p>Are you sure you would like to buy ITEM?</p>
+        </div>
+        <div class="buybuttons">
+          <div class="yes">
+            <p>Yes</p>
+          </div>
+          <div class="cancel">
+            <p>Cancel</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="transaction-menu" id="deposit-menu">
+      <div class="transaction-input">
+        <div class="depos-title">
+          <p>How much would you like to Deposit?</p>
+        </div>
+        <div class="depos-input">
+          <input type="number" id="debit" name="fname">
+        </div>
+        <div class="depos-buttons">
+          <div class="depos-deposit">
+            <p>Deposit</p>
+          </div>
+          <div class="depos-cancel">
+            <p>Cancel</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="items">
       <p class="title-card">E-Vending Machine</p>
       <div class="card-cont">
-        <div class="card" id="Water"></div>
-        <div class="card" id="Energy"></div>
-        <div class="card" id="Coffee"></div>
-        <div class="card" id="Vitamins"></div>
-        <div class="card" id="Soda"></div>
-        <div class="card" id="Lemonade"></div>
-        <div class="card" id="Gatorade"></div>
-        <div class="card" id="Iced_Tea"></div>
+        <div class="card" id="Water">
+          <div class="item-photo">
+          </div>
+          <div class="item-info">
+            <p>₱15<br>Water Bottle</p>
+          </div>
+        </div>
+        <div class="card" id="Energy">
+          <div class="item-photo"></div>
+          <div class="item-info">
+            <p>₱40<br>Energy Drink</p>
+          </div>
+        </div>
+        <div class="card" id="Coffee">
+          <div class="item-photo"></div>
+          <div class="item-info">
+            <p>₱20<br>Coffee Drink</p>
+          </div>
+        </div>
+        <div class="card" id="Vitamins">
+          <div class="item-photo"></div>
+          <div class="item-info">
+            <p>₱30<br>Vitamin Drink</p>
+          </div>
+        </div>
+        <div class="card" id="Soda">
+          <div class="item-photo"></div>
+          <div class="item-info">
+            <p>₱35<br>Soda</p>
+          </div>
+        </div>
+        <div class="card" id="Lemonade">
+          <div class="item-photo"></div>
+          <div class="item-info">
+            <p>₱60<br>Lemonade</p>
+          </div>
+        </div>
+        <div class="card" id="Gatorade">
+          <div class="item-photo"></div>
+          <div class="item-info">
+            <p>₱30<br>Gatorade</p>
+          </div>
+        </div>
+        <div class="card" id="Iced_Tea">
+          <div class="item-photo"></div>
+          <div class="item-info">
+            <p>₱40<br>Iced Tea</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="menu"></div>
+    <div class="menu">
+      <div class="info">
+        <p class="info-title">How it Works</p>
+        <p class="info-info">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="bar"></div>
+      <div class="dep">
+        <div class="dep-title">
+          <span>Current Balance</span>
+        </div>
+        <div class="dep-balance">
+          <span>0</span>
+        </div>
+        <div class="dep-button">
+          <span>Deposit</span>
+        </div>
+      </div>
+    </div>
   </section>
+  <script src="app.js" charset="utf-8"></script>
 </body>
 </html>
