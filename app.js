@@ -32,3 +32,13 @@ if(menu) {
     menu.classList.remove('dropped');
   })
 }
+
+// Deposit Button Effects
+var depmenu = document.querySelector('#deposit-menu');
+var depbutton = document.querySelector('.dep');
+depbutton.addEventListener('click', ()=> {
+  depmenu.classList.add('showmenu');
+})
+depmenu.addEventListener('click', ()=> {
+  depmenu.classList.remove('showmenu');
+})
